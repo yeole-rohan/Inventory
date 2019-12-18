@@ -23,6 +23,9 @@ Features Implemented in app
  4. $env:FLASK_APP = "inventory"
  5. $env:FLASK_ENV = "development"
  6. flask run
+ 
+ 
+ 
  ** Following message will come **
  * Serving Flask app "inventory" (lazy loading)
  * Environment: development

@@ -19,7 +19,7 @@ Features Implemented in app
  
  1. clone the repo
  2. cd inventory
- 3. install flask latest version
+ 3. pip install flask
  4. $env:FLASK_APP = "inventory"
  5. $env:FLASK_ENV = "development"
  6. flask run

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="prod-list">
+    <h4>Balance quantity in each location</h4>
+    <table>
+        <thead>
+            <tr class="align">
+                <td>
+                    Location
+                </td>
+                <td>
+                    product quantity available
+                </td>
+                <td>
+                    product id
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for all in all_data %}
+                {% if all.to_loc =='none' %}
+                    {% else %}
+                    <tr class="align">
+                        <td>
+                            {{ all.to_loc }}
+                        </td>
+                        <td>
+                            {{ all.quantity }}
+                        </td>
+                        <td>
+                            {{ all.prod_id }}
+                        </td>
+                    </tr>
+                {% endif %}
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock body %}
+    

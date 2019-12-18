@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="prod-list">
+    <form method="POST">
+        <label class="label" for="product">Edit the product name</label>
+        <input class="inputs" type="text" id="product" name="product" value="{{ product['product_name'] }}" required autofocus>
+        <label class="label" for="quantity">Edit the Quantity</label>
+        <input class="inputs" type="number"id="quantity" name="quantity" value="{{ product['product_quantity'] }}" required>
+        <button class="add" type="submit" value="Submit">Add Edited Product</button>
+    </form>
+</div>
+{% endblock body %}
+    

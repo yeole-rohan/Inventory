@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    <div class="prod-list">
+        
+         <form method="POST">
+            <label class="label" for="product">Enter the product name</label>
+            <input class="inputs" type="text" id="product" name="product" value="" required autofocus>
+            <label class="label" for="quantity">Enter the Quantity</label>
+            <input class="inputs" type="number"id="quantity" name="quantity" value="" required>
+            <button class="add" type="submit" value="Submit">Add Product</button>
+        </form>
+        <ul class="ul">
+            <li class="lists">
+                <div class="prod-name">product name</div>
+                <div class="prod-qty">product quantity</div>
+            </li>
+            {% for prod in products %}
+                <li class="lists">
+                    <div class="prod-name">{{ prod['product_name'] }}</div>
+                    <div class="prod-qty">{{ prod['product_quantity'] }}</div>
+                    <div class="edit">
+                        <a class="link" href="{{ url_for('product.edit', id=prod['id']) }}">Edit</a>
+                    </div>
+                </li>
+                <!-- Check if this is the last element from list if not print hr html tag else don't -->
+                {% if not loop.last %}
+                    <hr>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock body %}
+    

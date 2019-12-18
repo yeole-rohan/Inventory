@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inventory</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+
+</head>
+<body>
+    <div class="top">
+    <div class="container">
+            <div class="pull-left">
+                <h2>
+                    <a href="{{ url_for('product.index') }}">Inventory Management</a> 
+                </h2>
+            </div>
+          <div class="pull-right">
+            {% block head %}
+                <ul class="ul heads">
+                    <li>
+                        <a href="{{ url_for('product.index') }}">Home</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('product.add') }}">Add Product</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('location.warehouse') }}">Add Ware Houese</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('movement.movement') }}">Move</a>
+                    </li>
+                   
+                </ul>
+            {% endblock head %}
+          </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        {% block body %}
+        
+        {% endblock body %} 
+    </div>
+
+<!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> -->
+</body>
+</html>

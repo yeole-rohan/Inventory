@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="prod-list">
+    <form method="POST">
+       <label class="label" for="warehouse">Edit the Ware House name</label>
+       <input class="inputs" type="text" id="warehouse" name="warehouse" value="{{ location['loc_name'] }}" required autofocus>
+       <button class="add" type="submit" value="Submit">Add Edited House</button>
+   </form>
+</div>
+{% endblock body %}
+    

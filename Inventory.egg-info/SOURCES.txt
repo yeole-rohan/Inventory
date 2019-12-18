@@ -1,0 +1,12 @@
+setup.py
+Inventory.egg-info/PKG-INFO
+Inventory.egg-info/SOURCES.txt
+Inventory.egg-info/dependency_links.txt
+Inventory.egg-info/not-zip-safe
+Inventory.egg-info/requires.txt
+Inventory.egg-info/top_level.txt
+inventory/__init__.py
+inventory/db.py
+inventory/location.py
+inventory/movement.py
+inventory/product.py

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <div class="prod-list">
+        <form action="" method="POST">
+            <label class="label" for="to">To</label>
+            <label class="label" for="products">Products</label>
+            <select class="inputs" name="products" id="products">
+                    <option value="{{ lists[1] }}">{{ lists[1] }}</option>
+            </select>
+            <label class="label" for="qty">Quantity To Be Moved</label>
+            <input type="text" class="inputs" name="quantity" id="quantity" value="{{ lists[4] }}">
+            <button type="submit" class="add">Move</button>
+        </form>
+    </div>
+{% endblock body %}
+    

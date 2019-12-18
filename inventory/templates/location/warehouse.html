@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="prod-list">
+    <form method="POST">
+        <label class="label" for="warehouse">Enter the Ware House name</label>
+        <input class="inputs" type="text" id="warehouse" name="warehouse" value="" required autofocus>
+        <button class="add" type="submit" value="Submit">Add Ware House</button>
+    </form>
+    <br>
+    <ul class="ul">
+        {% for locations in all %}
+            <li class="ware">
+                <p class="loc_name">{{ locations.loc_name }}</p>
+                <div class="loc_link">
+                    <a class="link pull-right" href="{{ url_for('location.edit_warehouse', id=locations['id']) }}">Edit</a>
+                </div>
+            </li>
+            {% if not loop.last %}
+            <hr>
+        {% endif %}
+        {% endfor %}
+        </ul>
+</div>
+{% endblock body %}
+    

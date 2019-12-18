@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css?family=Gelasio:400,500,600,700&display=swap');
+body{
+    margin: 0;
+    font-family: 'Gelasio', serif;
+}
+.container{
+    max-width: 1150px;
+    margin:0 auto;
+}
+.top{
+    height:60px;
+    background-color: cadetblue;
+    color: white;
+}
+.top h2 a{
+    font-weight: 800;
+    color: #fff;
+    margin: 15px 0;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+.pull-left{
+    float: left;
+}
+.pull-right{
+    float: right;
+}
+.pull-right a{
+    display: block;
+    color: #fff;
+    margin: 15px 0;
+    text-decoration: none;
+    background: #006064;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.30s ease-in-out;
+    border:1px solid #fff;
+}
+.pull-right a:hover, .link:hover{
+    background: #fff;
+    border-color: #006064;
+    color: #006064;
+    transition: all 0.30s ease-in-out;
+}
+.prod-list{
+    box-shadow: 0px 0px 3px 0px #0a92d4;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    width: 100%;
+}
+.lists{
+    display: block;
+    height: 35px;
+    line-height: 35px;
+}
+.prod-list .prod-name, .prod-list .prod-qty, .prod-list .edit{
+    width:33%;
+    float: left;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+.prod-list .prod-name{
+    text-align: left;
+}
+.prod-list .prod-qty{
+    text-align: center;
+}
+.prod-list .edit{
+    text-align: right;
+    line-height: 36px;
+}
+.ul{
+    list-style-type: none;
+    padding: 0;
+    margin:0;
+}
+.link{
+    padding: 5px 10px;
+    color: #fff;
+    text-decoration: none;
+    background: #006064;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    transition: all 0.30s ease-in-out;
+}
+.label{
+    display: block;
+    font-weight:800;
+    font-size:18px;
+    padding: 10px 0;
+}
+.inputs{
+    width: -webkit-fill-available;
+    height: 25px;
+    line-height: 25px;
+    font-weight:lighter;
+    padding:0 10px;
+    border: 1px solid #006064;
+    border-radius: 10px;
+    outline: none;
+    letter-spacing: 1px;;
+}
+.add{
+    background: #006064;
+    outline: navajowhite;
+    border: 1px solid #006064;
+    line-height: 25px;
+    border-radius: 5px;
+    color: #fff;
+    margin: 15px 0 0;
+    transition: all 0.30s ease-in-out;
+    cursor: pointer;
+
+}
+.add:hover{
+    background: #fff;
+    color: #006064;
+    transition: all 0.30s ease-in-out;
+    cursor: pointer;
+}
+.heads li{
+    display: inline-block;
+}
+.ware{
+    text-transform: capitalize;
+    font-size:18px;
+    height: 35px;
+}
+.loc_name{
+    width: 45%;
+    float: left;
+    margin: 0;
+    padding: 0;
+    line-height: 42px;
+}
+.loc_link{
+    width: 45%;
+    float: right;
+}
+thead{font-size: 20px;}
+table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;;
+}
+tr{
+    height: 35px;
+    line-height: 35px;
+    border-bottom: 1px solid #000;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+tr:last-child{border: none;}
+.align{
+    text-align: center;
+}

@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <div class="prod-list">
+        <form action="" method="POST">
+            <label class="label" for="to">To</label>
+            <select class="inputs" name="to" id="to">
+                <option value="none">None</option>
+                {% for loc in location %}
+                    <option value="{{ loc['loc_name'] }}">{{ loc['loc_name'] }}</option>
+                {% endfor %}
+            </select>
+            <label class="label" for="from">From</label>
+            <select class="inputs" name="from" id="from">
+                <option value="none">None</option>
+                {% for loc_val in location %}
+                    <option value="{{ loc_val['loc_name'] }}">{{ loc_val['loc_name'] }}</option>
+                {% endfor %}
+            </select>
+            <label class="label" for="products">Products</label>
+            <select class="inputs" name="products" id="products">
+                {% for product in products %}
+                    <option value="{{ product['id'] }}">{{ product['product_name'] }}</option>
+                {% endfor %}
+            </select>
+            <label class="label" for="qty">Quantity To Be Moved</label>
+            <input type="text" class="inputs" name="quantity" id="quantity">
+            <button type="submit" class="add">Move</button>
+        </form>
+        
+        {% if error %}
+            <p>{{ error }}</p>
+        {% endif %}
+        <!-- <a href="{{ url_for('movement.movement') }}">Move</a> -->
+        <table>
+            <thead>
+                <tr class="align">
+                    <td>
+                        Id
+                    </td>
+                    <td>
+                        To
+                    </td>
+                    <td>
+                        From
+                    </td>
+                    <td>
+                        Quantity
+                    </td>
+                    <td>
+                        Product Id
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for move in movements %}
+                <tr class="align">
+                    <td>
+                        {{ move.id }}
+                    </td>
+                    <td>
+                        {{ move.to_loc }}
+                    </td>
+                    <td>
+                        {{ move.from_loc }}
+                    </td>
+                    <td>
+                        {{ move.quantity }}
+                    </td>
+                    <td>
+                        {{ move.prod_id }}
+                    </td>
+                    <td>
+                        <a class="link" href="{{ url_for('movement.edit_movement', id=move['id']) }}">Edit</a>
+                    </td>
+                   
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+     
+            
+    </div>
+{% endblock body %}
+    

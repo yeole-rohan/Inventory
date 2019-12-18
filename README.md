@@ -1,5 +1,5 @@
 # Inventory
-The landing page is blank at first time when you intall the app.
+Features Implemented in app
 1. Adding a product
   a. It takes a product name a nd its quantity
 2. Add Ware House
